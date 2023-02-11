@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#TopNavWrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+}
+
+#WorkSpaceHeaderContainer{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+}
+
+#WorkSpaceHeader{
+    position: relative;
+    top: 0;
+    left: 1vw;
+    color: #011627;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5vw;
+}
+
+#Alert{
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    height: 10vh;
+    width: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#AlertEmptyContainer{
+    position: absolute;
+    height: 6vh;
+    width: 20vw;
+    background-color: #e0e0e0;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9vw;
+    font-family: 'Open Sans', sans-serif;
+    color: #011627;
+    margin-top: -20vh;
+    animation: AlertEmptyAnimation 2s alternate;
+}
+
+#AlertBusContainer{
+    position: absolute;
+    height: 6vh;
+    width: 20vw;
+    background-color: #e0e0e0;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9vw;
+    font-family: 'Open Sans', sans-serif;
+    color: #011627;
+    margin-top: -20vh;
+    animation: AlertEmptyAnimation 2s alternate;
+}
+
+@keyframes AlertEmptyAnimation {
+    0%   {margin-top: -20vh;}
+    25%  {margin-top:  0vh;}
+    75%  {margin-top:  0vh;}
+    100% {margin-top: -20vh;}
+}
+
+#TopNavBtnContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 10vh;
+    width: 15vw;
+}
+
+#SaveBtnContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 10vh;
+    width: 10vw;
+}
+
+#SaveBtn{
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 2.5vh;
+    left: 2vw;
+    height: 5vh;
+    width: 6vw;
+    border-radius: 1vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1vw;
+    background-color: #0969db;
+    color: white;
+}
+
+#NewBrickBtnContainer{
+    position: absolute;
+    top: 0;
+    right: 10vw;
+    height: 10vh;
+    width: 5vw;
+}
+
+#NewBtn{
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 2.5vh;
+    left: 2.5vw;
+    height: 5vh;
+    width: 4vw;
+    border-radius: 1vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1vw;
+    background-color: #0969db;
+    color: white;
+    transition: 0.2s ease;
+}
+
+#RouteWrapper{
+    position: absolute;
+    top: 11vh;
+    left: 1vw;
+    height: 82vh;
+    width: 18vw;
+    border-radius: 2vh;
+    background-color: #E0E0E0;
+}
+
+#Route1Container{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 88vh;
+    width: 18vw;
+    border-radius: 2vh;
+}
+
+#TitleTextBox{
+    position: relative;
+    top: 2vh;
+    left: 1vw;
+    height: 4vh;
+    width: 16vw;
+    border: none;
+    outline: none;
+    padding-left: 0.5vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    border-radius: 2vh 2vh 0 0 ;
+    color: #75758a;
+}
+
+#SetTitleBtn{
+    position: relative;
+    top: 2vh;
+    left: 1vw;
+    height: 4vh;
+    width: 16vw;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    background-color: #0969db;
+    color: white;
+    border-radius: 0 0 2vh 2vh;
+}
+
+#ColorSectionContainer{
+    position: relative;
+    top: 13vh;
+    left: 1vw;
+    height: 21vh;
+    width: 16vw;
+    border-radius: 2vh;
+    background-color: white;
+}
+
+.ColorSection{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 7vh;
+    width: 16vw;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+}
+
+.ColorPicker{
+    position: absolute;
+    top: 2.5vh;
+    right: 2vw;
+    border: none;
+    outline: none;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+}
+
+#Route2Container{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 88vh;
+    width: 18vw;
+    border-radius: 2vh;
+    display: none; /* it's off */
+}
+
+#MembersHeaderContainer{
+    position: relative;
+    top: 2vh;
+    left: 1vw;
+    height: 4vh;
+    width: 16vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1vw;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5vw;
+    color: black;
+}
+
+#MembersContainer{
+    position: relative;
+    top: 2.5vh;
+    left: 1vw;
+    height: 50vh;
+    width: 16vw;
+    border-radius: 2vh;
+    background-color: white;
+}
+
+#Route3Container{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 88vh;
+    width: 18vw;
+    border-radius: 2vh;
+    display: none; /* it's off */
+}
+
+#GoalTextBox{
+    position: relative;
+    top: 2vh;
+    left: 1vw;
+    height: 20vh;
+    width: 16vw;
+    border: none;
+    outline: none;
+    padding-top: 0.5vh;
+    padding-left: 0.5vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    border-radius: 2vh 2vh 0 0 ;
+    color: #75758a;
+    resize: none;
+}
+
+#SetGoalBtn{
+    position: relative;
+    top: 1.5vh;
+    left: 1vw;
+    height: 4vh;
+    width: 16vw;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    background-color: #0969db;
+    color: white;
+    border-radius: 0 0 2vh 2vh;
+}
+
+#BusWrapper{
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    height: 90vh;
+    width: 80vw;
+    background-color: black;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.Bus{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+    background-color: white;
+    scroll-snap-align: start;
+}
+
+.HomeLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 80vw;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.BusHeaderContainer{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 20vh;
+    width: 80vw;
+    
+    display: flex;
+    align-items: center;
+}
+
+.BusHeader{
+    font-family: 'Dongle', sans-serif;
+    font-size: 5vw;
+    margin-left: 4vw;
+}
+
+.BrickContainer{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 70vh;
+    width: 80vw;
+    
+    display: flex;
+}
+
+.MembersContainer{
+    position: relative;
+    top: 2vh;
+    left: 4vw;
+    height: 40vh;
+    width: 25vw;
+    border-radius: 1.5vh;
+    background-color: #26F776;
+    z-index: 2;
+}
+
+.FileContainer{
+    position: absolute;
+    top: 44vh;
+    left: 4vw;
+    height: 18vh;
+    width: 25vw;
+    border-radius: 1.5vh;
+    background-color: #011627;
+    z-index: 2;
+}
+
+.GoalContainer{
+    position: relative;
+    top: 2vh;
+    left: 6vw;
+    height: 60vh;
+    width: 45vw;
+    border-radius: 1.5vh;
+    background-color: #FF729F;
+    border-top: 0.5vh solid #FF729F;
+    border-bottom: 0.5vh solid #FF729F;
+    z-index: 2;
+    overflow-y: auto;
+    padding-bottom: 1vh;
+}
+
+.GoalList{
+    position: relative;
+    top: 0;
+    left: 0.5vw;
+    height: auto;
+    width: 44vw;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9vw;
+    margin-top: 1vh;
+    padding: 0.5vw;
+    border-radius: 1vh;
+}
+
+#DeleteListItemButton{
+    position: absolute;
+    bottom: 1vh;
+    right: 0.5vw;
+    height: 1.5vh;
+    width: 1.5vh;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 0.4s ease-out;
+}
+
+.GoalList:hover #DeleteListItemButton {
+    background-color: red;
+}
